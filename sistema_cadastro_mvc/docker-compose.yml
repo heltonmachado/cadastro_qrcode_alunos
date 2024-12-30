@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # Serviço PHP com Apache
+  php-apache:
+    build: .
+    ports:
+      - "8080:80"  # Mapeia a porta 8080 do host para a porta 80 do contêiner
+    volumes:
+      - .:/var/www/html  # Mapeia o diretório local para o diretório do contêiner
+    networks:
+      - app-network
+    environment:
+      - DB_HOST=mysql
+      - DB_NAME=sistema_cadastro_qrcode
+      - DB_USER=root
+      - DB_PASSWORD=
+
+  # Serviço MySQL
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: ""  # Usuário root sem senha
+      MYSQL_DATABASE: sistema_cadastro_qrcode  # Nome do banco de dados
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mysql-data:
+    driver: local

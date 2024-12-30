@@ -1,0 +1,47 @@
+body {
+    position: relative;
+    background-image: url('');
+    background-size: 600px 600px;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #111010;
+  }
+  
+  /* Efeito de linha embaixo do item do menu */
+  .navbar-nav .nav-item .nav-link {
+    position: relative;
+    padding-bottom: 5px; /* Espaço para a linha aparecer */
+    text-align: center;
+  }
+  
+  .navbar {
+    width: 100%;
+    background-color:#c7cdcf;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+   }
+  
+  .navbar-nav .nav-item .nav-link:hover {
+    border-bottom: 2px solid #04ADF0; /* Linha preta embaixo ao passar o mouse */
+    color: #0f0f0f;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  /* Alinha o ícone do menu hambúrguer à direita */
+  .navbar-toggler {
+  margin-left: auto; /* Empurra o ícone para a direita */
+  }
+  
+  #send-form {
+  background-color: #104261; /* Cor de fundo inicial */
+  border-color: #104261; /* Cor da borda, caso haja borda */
+  color: white; /* Cor do texto */
+  }
+  
+  #send-form:hover {
+  background-color: #07A5E4; /* Cor de fundo ao passar o mouse */
+  border-color: #07A5E4; /* Cor da borda ao passar o mouse */
+  color: white; /* Cor do texto ao passar o mouse */
+  }
